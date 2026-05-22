@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="30.0" style="-fx-padding: 40;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.finance_tracker.TransactionController">
+
+    <VBox spacing="5.0">
+        <Label text="Log Transaction" textFill="#1a252f">
+            <font><Font name="System Bold" size="32.0" /></font>
+        </Label>
+        <Label text="Record a new income or expense entry." textFill="#7f8c8d">
+            <font><Font size="15.0" /></font>
+        </Label>
+    </VBox>
+
+    <VBox spacing="25.0" style="-fx-background-color: white; -fx-padding: 40; -fx-background-radius: 16; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 25, 0, 0, 10);">
+
+        <HBox spacing="20.0">
+            <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                <Label text="TRANSACTION TYPE" textFill="#95a5a6">
+                    <font><Font name="System Bold" size="11.0" /></font>
+                </Label>
+                <ComboBox fx:id="typeCombo" maxWidth="1.7976931348623157E308" prefHeight="48.0" promptText="Select Income or Expense" style="-fx-background-color: #f8f9fa; -fx-border-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 14px; -fx-cursor: hand;" />
+            </VBox>
+            <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                <Label text="CATEGORY" textFill="#95a5a6">
+                    <font><Font name="System Bold" size="11.0" /></font>
+                </Label>
+                <ComboBox fx:id="categoryCombo" maxWidth="1.7976931348623157E308" prefHeight="48.0" promptText="Select Category" style="-fx-background-color: #f8f9fa; -fx-border-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 14px; -fx-cursor: hand;" />
+            </VBox>
+        </HBox>
+
+        <HBox spacing="20.0">
+            <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                <Label text="AMOUNT (KSH)" textFill="#95a5a6">
+                    <font><Font name="System Bold" size="11.0" /></font>
+                </Label>
+                <TextField fx:id="amountField" prefHeight="48.0" promptText="e.g. 1500.50" style="-fx-background-color: #f8f9fa; -fx-border-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15; -fx-font-size: 14px;" />
+            </VBox>
+            <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                <Label text="DATE" textFill="#95a5a6">
+                    <font><Font name="System Bold" size="11.0" /></font>
+                </Label>
+                <DatePicker fx:id="datePicker" maxWidth="1.7976931348623157E308" prefHeight="48.0" style="-fx-background-color: #f8f9fa; -fx-border-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 14px; -fx-cursor: hand;" />
+            </VBox>
+        </HBox>
+
+        <VBox spacing="8.0">
+            <Label text="DESCRIPTION (OPTIONAL)" textFill="#95a5a6">
+                <font><Font name="System Bold" size="11.0" /></font>
+            </Label>
+            <TextField fx:id="descField" prefHeight="48.0" promptText="e.g. Bought groceries at Naivas" style="-fx-background-color: #f8f9fa; -fx-border-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15; -fx-font-size: 14px;" />
+        </VBox>
+
+        <Button maxWidth="1.7976931348623157E308" onAction="#handleSave" prefHeight="55.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 8; -fx-cursor: hand;" text="Save Transaction">
+            <VBox.margin><Insets top="10.0" /></VBox.margin>
+        </Button>
+    </VBox>
+</VBox>

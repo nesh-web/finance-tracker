@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.finance_tracker.RegisterController">
+
+    <VBox alignment="CENTER_LEFT" prefWidth="380.0" spacing="20.0" style="-fx-background-color: linear-gradient(to bottom right, #1a252f, #2c3e50); -fx-padding: 50;">
+
+        <Label text="FinancePro" textFill="WHITE">
+            <font><Font name="System Bold" size="42.0" /></font>
+        </Label>
+
+        <Label text="Next-Generation Wealth Management." textFill="#bdc3c7" wrapText="true">
+            <font><Font size="18.0" /></font>
+        </Label>
+
+        <Region VBox.vgrow="ALWAYS" />
+
+        <VBox spacing="15.0" style="-fx-background-color: rgba(255,255,255,0.05); -fx-padding: 25; -fx-background-radius: 12; -fx-border-color: rgba(255,255,255,0.1); -fx-border-radius: 12;">
+            <Label text="✓ Military-grade encryption" textFill="#2ecc71">
+                <font><Font name="System Bold" size="13.0" /></font>
+            </Label>
+            <Label text="✓ Real-time asset tracking" textFill="#2ecc71">
+                <font><Font name="System Bold" size="13.0" /></font>
+            </Label>
+            <Label text="✓ 100% Data Privacy" textFill="#2ecc71">
+                <font><Font name="System Bold" size="13.0" /></font>
+            </Label>
+        </VBox>
+    </VBox>
+
+    <VBox alignment="CENTER" style="-fx-background-color: #f4f6f9;" HBox.hgrow="ALWAYS">
+
+        <VBox maxWidth="450.0" spacing="25.0" style="-fx-background-color: white; -fx-padding: 50; -fx-background-radius: 16; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 25, 0, 0, 10);">
+
+            <VBox spacing="5.0">
+                <Label text="Create Account" textFill="#2c3e50">
+                    <font><Font name="System Bold" size="32.0" /></font>
+                </Label>
+                <Label text="Initialize your secure financial profile." textFill="#7f8c8d">
+                    <font><Font size="15.0" /></font>
+                </Label>
+            </VBox>
+
+            <VBox spacing="8.0">
+                <Label text="USERNAME" textFill="#95a5a6">
+                    <font><Font name="System Bold" size="11.0" /></font>
+                </Label>
+                <TextField fx:id="usernameField" prefHeight="48.0" promptText="Enter your username" style="-fx-background-color: #f8f9fa; -fx-border-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15; -fx-font-size: 14px;" />
+            </VBox>
+
+            <VBox spacing="8.0">
+                <Label text="SECURE PASSWORD" textFill="#95a5a6">
+                    <font><Font name="System Bold" size="11.0" /></font>
+                </Label>
+                <PasswordField fx:id="passwordField" prefHeight="48.0" promptText="••••••••" style="-fx-background-color: #f8f9fa; -fx-border-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15; -fx-font-size: 14px;" />
+            </VBox>
+
+            <VBox spacing="8.0">
+                <Label text="CONFIRM PASSWORD" textFill="#95a5a6">
+                    <font><Font name="System Bold" size="11.0" /></font>
+                </Label>
+                <PasswordField fx:id="confirmField" prefHeight="48.0" promptText="••••••••" style="-fx-background-color: #f8f9fa; -fx-border-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15; -fx-font-size: 14px;" />
+            </VBox>
+
+            <Button maxWidth="1.7976931348623157E308" onAction="#handleRegister" prefHeight="55.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 8; -fx-cursor: hand;" text="Initialize Account">
+                <VBox.margin><Insets top="10.0" /></VBox.margin>
+            </Button>
+
+            <HBox alignment="CENTER" spacing="5.0">
+                <Label text="Already registered?" textFill="#7f8c8d">
+                    <font><Font size="14.0" /></font>
+                </Label>
+                <Hyperlink onAction="#loadLogin" style="-fx-text-fill: #2980b9; -fx-underline: false; -fx-font-weight: bold;" text="Sign In here">
+                    <font><Font size="14.0" /></font>
+                </Hyperlink>
+            </HBox>
+
+        </VBox>
+    </VBox>
+</HBox>
